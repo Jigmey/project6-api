@@ -1,7 +1,19 @@
 let mongoose = require('mongoose')
 
 let ff14Schema = new mongoose.Schema({
-  Results:100
+  Results: [
+    {
+        Data: {
+            ID: Number,
+            Name: String,
+            Name_de: String,
+            Name_en: String,
+            Name_fr: String,
+            Name_ja: String
+        },
+        Text: String
+    }
+  ]
   // Character: {
   //   ActiveClassJob: {
   //       IsSpecialised: Boolean,
